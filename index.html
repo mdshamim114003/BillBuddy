@@ -4,14 +4,61 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Group Expense</title>
+  <title>BillBuddy</title>
   <script src="js/script.js" type="module" defer></script>
+  <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <!-- <script src="db.js" defer></script> -->
+
 </head>
 <body>
   <section id="">
-    <div></div>
-    <button id="create-new-group">Create a New Group</button>
+    <!-- Modal Trigger -->
+  <a class="waves-effect waves-light btn modal-trigger" href="#modal1">+</a>
+
+  <!-- Modal Structure -->
+  <div id="modal1" class="modal">
+    <div class="modal-content">
+      <h4>Create a New Bill</h4>
+      <div class="row">
+        <form class="col s12">
+          <div class="row">
+            <div class="input-field col s12">
+              <input id="bill-title" type="text" class="validate">
+              <label for="bill-title">Title</label>
+            </div>
+            <div class="input-field col s12">
+              <textarea id="bill-description" class="materialize-textarea"></textarea>
+              <label for="bill-description">Description</label>
+            </div>
+          </div>
+          <div class="row">
+            <h5>Participants</h5>
+            <div id="participant">
+              <div class="input-field col s10">
+                <input id="bill-participant" type="text" class="validate">
+                <label for="bill-participant">Participant Name</label>
+              </div>
+              
+              <div class="input-field col s2">
+                <a id="add-participant" class="waves-effect waves-light btn-floating"><i class="material-icons">add</i></a>
+                <a class="waves-effect waves-light btn-floating red darken-1"><i class="material-icons">delete</i></a>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+      
+    </div>
+    <div class="modal-footer">
+      <a href="#!" class="modal-close waves-effect waves-green btn-flat">Agree</a>
+    </div>
+  </div>
+
   </section>
 </body>
 </html>

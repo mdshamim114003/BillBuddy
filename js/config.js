@@ -1,5 +1,5 @@
 const config = {
-  dbName : 'groupExpense'
+  dbName : 'billBuddy'
 }
 
 export default config
